@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Army</title>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* 전체 페이지 스타일 */
+        body {
+            font-family: 'trebuchetms', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #eeeded;
+        }
+
+
+        /* 중앙 정렬을 위한 컨테이너 */
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* dogtag 이미지 */
+        .dogtag {
+            width: 900px;
+            height: auto;
+        }
+
+        /* 질문 텍스트 */
+        .question {
+            font-size: 35px;
+            font-weight: 900;
+            margin-top: 0px;
+            margin-bottom: 40px;
+        }
+
+        /* 선택지 버튼 스타일 */
+        .options {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .options button {
+            font-size: 20px;
+            font-family: 'trebuchetms', sans-serif;
+            background-color: transparent;
+            border: 2px solid black;
+            padding: 5px 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .options button:hover {
+            background-color: #000;
+            color: white;
+        
+        }
+
+        /* 제출 버튼 스타일 */
+        .submit-btn {
+            font-size: 20px;
+            font-family: 'trebuchetms', sans-serif;
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .submit-btn:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+</div>
+
+    <div class="container">
+
+        <!-- Dogtag 이미지 -->
+        <img src="dogtag.png" alt="Dog Tag" class="dogtag">
+
+
+        <!-- 질문 텍스트 -->
+        <div class="question">
+            Would you join the Army ?
+        </div>
+
+        <!-- 선택지 버튼 -->
+        <div class="options">
+            <button id="yesButton" onclick="submitForm()">Yes</button>
+            <button id="yesButton" onclick="submitForm()">Yes</button>
+        </div>
+
+        <!-- 제출 버튼 -->
+        <button class="submit-btn" id="submitButton" onclick="redirectToIndex2()">Submit</button>
+    </div>
+
+    <script>
+        // 제출 버튼 클릭 시 index2.html로 리디렉션
+        function redirectToIndex2() {
+            window.location.href = 'index2.html'; // index2.html로 이동
+        }
+
+        // 옵션 버튼 클릭 시 선택지 처리
+        function submitForm() {
+            console.log("Option selected");
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+/* 전체 기본 스타일 */
+body {
+    font-family: 'trebuchetms', sans-serif;
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 상단 메뉴바 */
+.navbar {
+    background-color: #373636; /* 어두운 배경색 */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* 메뉴바를 다른 콘텐츠보다 위에 놓기 위해 */
+}
+
+.navbar a {
+    display: block;
+    padding: 12px 18px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #575757; /* hover 시 배경색 */
+    color: #FFD700; /* hover 시 글자색 */
+}
+
+/* 페이지 내용 영역 (메뉴바 아래에 공간을 추가) */
+.content {
+    margin-top: 60px; /* 메뉴바 높이만큼 아래로 밀기 */
+    padding: 20px;
+}
+
+/* 페이지 배경 및 레이아웃을 위한 추가 스타일 */
+body, html {
+    height: 100%;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- 상단 메뉴바 -->
+    <div class="navbar">
+        <a href="index.html">Dog Tag</a>
+        <a href="index2.html">Patriotism</a>
+        <a href="index3.html">Tiger</a>
+        <a href="index4.html">Biodiversity</a>
+        <a href="index5.html">Global Warming</a>
+        <a href="index6.html">Just Stop Oil</a>
+    </div>
+
+    <!-- 페이지 내용 -->
+    <div class="content">
+        <!-- 각 페이지의 고유 내용이 여기에 들어갑니다. -->
+    </div>
+
+    <script>
+        // 페이지 관련 자바스크립트는 여기에 추가할 수 있습니다.
+    </script>
+
+</body>
+</html>

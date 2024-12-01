@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* 전체 페이지 스타일 */
+        body {
+            font-family: 'trebuchetms', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        /* 이미지들이 들어갈 컨테이너 */
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); /* 6개의 열 */
+            grid-template-rows: repeat(6, 1fr); /* 6개의 행 */
+            gap: 10px;
+            width: 150vw;
+            height: 150vh;
+            position: relative;
+            animation: rotate 20s linear infinite; /* 이미지들이 시계방향으로 회전하는 애니메이션 */
+        }
+
+        /* 이미지 크기 자동 조정 */
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* 시계방향 회전 애니메이션 */
+        @keyframes rotate {
+            50% {
+                transform: rotate(360deg);
+            }
+            50% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* 버튼 스타일 */
+        .button-container {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .national-animal-btn {
+            font-family: 'trebuchetms', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            background-color: black;
+            color: orange;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .national-animal-btn:hover {
+            background-color: #444;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="image-container">
+        <!-- 16개의 이미지 (18개 red.png, 18개 blue.png) -->
+        <img src="red.png" alt="Red Image">
+        <img src="blue.png" alt="Blue Image">
+        <img src="red.png" alt="Red Image">
+        <img src="blue.png" alt="Blue Image">
+        <img src="red.png" alt="Red Image">
+        <img src="blue.png" alt="Blue Image">
+        
+        <img src="blue.png" alt="Blue Image">
+        <img src="red.png" alt="Red Image">
+        <img src="blue.png" alt="Blue Image">
+        <img src="red.png" alt="Red Image">
+        <img src="blue.png" alt="Blue Image">
+        <img src="red.png" alt="Red Image">
+
+        <img src="red.png" alt="Red Image">
+        <img src="blue.png" alt="Blue Image">
+        <img src="red.png" alt="Red Image">
+        <img src="blue.png" alt="Blue Image">
+        <img src="red.png" alt="Red Image">
+        <img src="blue.png" alt="Blue Image">
+        
+        <img src="blue.png" alt="Blue Image">
+        <img src="red.png" alt="Red Image">
+        <img src="blue.png" alt="Blue Image">
+        <img src="red.png" alt="Red Image">
+        <img src="blue.png" alt="Blue Image">
+        <img src="red.png" alt="Red Image">
+
+        <img src="red.png" alt="Red Image">
+        <img src="blue.png" alt="Blue Image">
+        <img src="red.png" alt="Red Image">
+        <img src="blue.png" alt="Blue Image">
+        <img src="red.png" alt="Red Image">
+        <img src="blue.png" alt="Blue Image">
+        
+        <img src="blue.png" alt="Blue Image">
+        <img src="red.png" alt="Red Image">
+        <img src="blue.png" alt="Blue Image">
+        <img src="red.png" alt="Red Image">
+        <img src="blue.png" alt="Blue Image">
+        <img src="red.png" alt="Red Image">
+    </div>
+
+    <div class="button-container">
+        <button class="national-animal-btn" onclick="redirectToIndex3()">NATIONAL ANIMAL of KOREA</button>
+    </div>
+
+    <script>
+        // 페이지 이동 함수
+        function redirectToIndex3() {
+            window.location.href = 'index3.html'; // index3.html로 이동
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+/* 전체 기본 스타일 */
+body {
+    font-family: 'trebuchetms', sans-serif;
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 상단 메뉴바 */
+.navbar {
+    background-color: #373636; /* 어두운 배경색 */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* 메뉴바를 다른 콘텐츠보다 위에 놓기 위해 */
+}
+
+.navbar a {
+    display: block;
+    padding: 12px 18px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #575757; /* hover 시 배경색 */
+    color: #FFD700; /* hover 시 글자색 */
+}
+
+/* 페이지 내용 영역 (메뉴바 아래에 공간을 추가) */
+.content {
+    margin-top: 60px; /* 메뉴바 높이만큼 아래로 밀기 */
+    padding: 20px;
+}
+
+/* 페이지 배경 및 레이아웃을 위한 추가 스타일 */
+body, html {
+    height: 100%;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- 상단 메뉴바 -->
+    <div class="navbar">
+        <a href="index.html">Dog Tag</a>
+        <a href="index2.html">Patriotism</a>
+        <a href="index3.html">Tiger</a>
+        <a href="index4.html">Biodiversity</a>
+        <a href="index5.html">Global Warming</a>
+        <a href="index6.html">Just Stop Oil</a>
+    </div>
+
+    <!-- 페이지 내용 -->
+    <div class="content">
+        <!-- 각 페이지의 고유 내용이 여기에 들어갑니다. -->
+    </div>
+
+    <script>
+        // 페이지 관련 자바스크립트는 여기에 추가할 수 있습니다.
+    </script>
+
+</body>
+</html>
